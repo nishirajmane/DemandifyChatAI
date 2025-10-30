@@ -114,13 +114,13 @@ export function auth(req: NextRequest, modelProvider: ModelProvider) {
     }
 
     if (systemApiKey) {
-      console.log("[Auth] use system api key");
+      console.log("[Auth] using system API key");
       req.headers.set("Authorization", `Bearer ${systemApiKey}`);
     } else {
-      console.log("[Auth] admin did not provide an api key");
+      console.log("[Auth] admin did not provide a system API key");
     }
   } else {
-    console.log("[Auth] use user api key");
+    console.log("[Auth] using user-provided API key");
   }
 
   return {

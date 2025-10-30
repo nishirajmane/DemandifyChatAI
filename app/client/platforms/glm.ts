@@ -175,7 +175,7 @@ export class ChatGLMApi implements LLMApi {
     const requestPayload = this.createPayload(messages, modelConfig, options);
     const path = this.path(this.getModelPath(modelType));
 
-    console.log(`[Request] glm ${modelType} payload: `, requestPayload);
+    console.log(`[Request] glm ${modelType} - model: ${requestPayload.model}, messages: ${requestPayload.messages?.length || 0}`);
 
     const controller = new AbortController();
     options.onController?.(controller);
@@ -198,7 +198,7 @@ export class ChatGLMApi implements LLMApi {
         clearTimeout(requestTimeoutId);
 
         const resJson = await res.json();
-        console.log(`[Response] glm ${modelType}:`, resJson);
+        console.log(`[Response] glm ${modelType} - status: ${res.status}, usage: ${resJson.usage ? JSON.stringify(resJson.usage) : 'N/A'}`);
         const message = this.parseResponse(modelType, resJson);
         options.onFinish(message, res);
         return;

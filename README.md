@@ -1,75 +1,78 @@
 <div align="center">
 
-<a href='https://nextchat.club'>
-  <img src="https://github.com/user-attachments/assets/83bdcc07-ae5e-4954-a53a-ac151ba6ccf3" width="1000" alt="icon"/>
-</a>
+<h1 align="center">Demandify AI Chat</h1>
 
-<h1 align="center">NextChat</h1>
+✨ Intelligent AI Assistant powered by Demandify Media, with Claude, DeepSeek, GPT4 & Gemini Pro support.
 
-English / [简体中文](./README_CN.md)
-
-<a href="https://trendshift.io/repositories/5973" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5973" alt="ChatGPTNextWeb%2FChatGPT-Next-Web | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-✨ Light and Fast AI Assistant,with Claude, DeepSeek, GPT4 & Gemini Pro support.
-
-[![Saas][Saas-image]][saas-url]
 [![Web][Web-image]][web-url]
-[![Windows][Windows-image]][download-url]
-[![MacOS][MacOS-image]][download-url]
-[![Linux][Linux-image]][download-url]
 
-[NextChatAI](https://nextchat.club?utm_source=readme) / [iOS APP](https://apps.apple.com/us/app/nextchat-ai/id6743085599) / [Web App Demo](https://app.nextchat.club) / [Desktop App](https://github.com/Yidadaa/ChatGPT-Next-Web/releases) / [Enterprise Edition](#enterprise-edition)
+[Demandify AI Chat](https://chat.demandify.media?utm_source=readme) / [Web App](https://chat.demandify.media) / [Enterprise Solutions](#enterprise-solutions)
 
-[saas-url]: https://nextchat.club?utm_source=readme
-[saas-image]: https://img.shields.io/badge/NextChat-Saas-green?logo=microsoftedge
-[web-url]: https://app.nextchat.club/
-[download-url]: https://github.com/Yidadaa/ChatGPT-Next-Web/releases
+[web-url]: https://chat.demandify.media/
 [Web-image]: https://img.shields.io/badge/Web-PWA-orange?logo=microsoftedge
-[Windows-image]: https://img.shields.io/badge/-Windows-blue?logo=windows
-[MacOS-image]: https://img.shields.io/badge/-MacOS-black?logo=apple
-[Linux-image]: https://img.shields.io/badge/-Linux-333?logo=ubuntu
 
-[<img src="https://zeabur.com/button.svg" alt="Deploy on Zeabur" height="30">](https://zeabur.com/templates/ZBUEFA) [<img src="https://vercel.com/button" alt="Deploy on Vercel" height="30">](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FChatGPTNextWeb%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=nextchat&repository-name=NextChat) [<img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod" height="30">](https://gitpod.io/#https://github.com/ChatGPTNextWeb/NextChat)
-
-[<img src="https://github.com/user-attachments/assets/903482d4-3e87-4134-9af1-f2588fa90659" height="50" width="" >](https://monica.im/?utm=nxcrp)
+[<img src="https://vercel.com/button" alt="Deploy on Vercel" height="30">](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDemandifyMedia%2Fdemandify-ai-chat&env=OPENAI_API_KEY&env=CODE&project-name=demandify-ai-chat&repository-name=demandify-ai-chat)
 
 </div>
 
-## ❤️ Sponsor AI API
+## 🚀 About Demandify Media
 
-<a href='https://302.ai/'>
-  <img src="https://github.com/user-attachments/assets/a03edf82-2031-4f23-bdb8-bfc0bfd168a4" width="100%" alt="icon"/>
-</a>
+Demandify Media is a leading digital innovation company specializing in AI-powered solutions and intelligent automation. Our AI Chat platform provides businesses and individuals with cutting-edge conversational AI capabilities.
 
-[302.AI](https://302.ai/) is a pay-as-you-go AI application platform that offers the most comprehensive AI APIs and online applications available.
+## 🎯 Features
 
-## 🥳 Cheer for NextChat iOS Version Online!
+- **Multi-Model Support**: Integration with GPT-4, Claude, Gemini Pro, and DeepSeek
+- **Enterprise Ready**: Scalable solutions for business needs
+- **Privacy First**: Your data stays secure and private
+- **Customizable**: Tailored AI assistants for your specific use cases
+- **Security Focused**: Built-in security measures to protect your API keys and data
 
-> [👉 Click Here to Install Now](https://apps.apple.com/us/app/nextchat-ai/id6743085599)
+## 🔒 Security
 
-> [❤️ Source Code Coming Soon](https://github.com/ChatGPTNextWeb/NextChat-iOS)
+Demandify AI Chat takes security seriously. Here are the built-in security features:
 
-![Github iOS Image](https://github.com/user-attachments/assets/e0aa334f-4c13-4dc9-8310-e3b09fa4b9f3)
+### API Key Protection
+- API keys are automatically masked in logs (only showing first 8 and last 4 characters)
+- Sensitive data is sanitized before logging
+- Production mode disables detailed logging that could expose sensitive information
 
-## 🫣 NextChat Support MCP !
+### Access Control
+- Set the `CODE` environment variable to require authentication
+- Multiple access codes supported (comma-separated)
+- User API keys are handled securely without server-side storage
 
-> Before build, please set env ENABLE_MCP=true
+### Security Best Practices
+1. **Always set a strong access code**: `CODE=your-secure-password`
+2. **Use HTTPS in production**: Never deploy with HTTP in production environments
+3. **Enable secure logging**: Set `DISABLE_SENSITIVE_LOGGING=true` in production
+4. **Regularly rotate API keys**: Change your API keys periodically
+5. **Monitor usage**: Keep track of your API usage and costs
 
-<img src="https://github.com/user-attachments/assets/d8851f40-4e36-4335-b1a4-ec1e11488c7e"/>
+### Environment Variables Security
+```bash
+# Required: Set a strong access code
+CODE=your-secure-password
 
-## Enterprise Edition
+# Recommended: Disable sensitive logging in production
+DISABLE_SENSITIVE_LOGGING=true
 
-Meeting Your Company's Privatization and Customization Deployment Requirements:
+# Your API keys (keep these secret!)
+OPENAI_API_KEY=sk-your-key-here
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+```
 
-- **Brand Customization**: Tailored VI/UI to seamlessly align with your corporate brand image.
-- **Resource Integration**: Unified configuration and management of dozens of AI resources by company administrators, ready for use by team members.
-- **Permission Control**: Clearly defined member permissions, resource permissions, and knowledge base permissions, all controlled via a corporate-grade Admin Panel.
-- **Knowledge Integration**: Combining your internal knowledge base with AI capabilities, making it more relevant to your company's specific business needs compared to general AI.
-- **Security Auditing**: Automatically intercept sensitive inquiries and trace all historical conversation records, ensuring AI adherence to corporate information security standards.
-- **Private Deployment**: Enterprise-level private deployment supporting various mainstream private cloud solutions, ensuring data security and privacy protection.
-- **Continuous Updates**: Ongoing updates and upgrades in cutting-edge capabilities like multimodal AI, ensuring consistent innovation and advancement.
+## Enterprise Solutions
 
-For enterprise inquiries, please contact: **business@nextchat.dev**
+Demandify Media offers comprehensive enterprise AI solutions tailored to your business needs:
+
+- **Custom Branding**: Complete white-label solutions with your brand identity
+- **Advanced Integration**: Seamless integration with your existing business systems
+- **Enhanced Security**: Enterprise-grade security and compliance features
+- **Dedicated Support**: 24/7 technical support and consultation
+- **Scalable Infrastructure**: Cloud-native architecture that grows with your business
+- **Custom AI Models**: Specialized AI models trained for your industry and use cases
+
+For enterprise inquiries, please contact: **enterprise@demandify.media**
 
 ## Screenshots
 

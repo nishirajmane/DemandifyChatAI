@@ -55,7 +55,10 @@ async function handle(
     duplex: "half",
   };
 
-  console.log("[Upstash Proxy]", targetUrl, fetchOptions);
+  console.log("[Upstash Proxy]", targetUrl, {
+    method: fetchOptions.method,
+    headers: "***REDACTED***"
+  });
   const fetchResult = await fetch(targetUrl, fetchOptions);
 
   console.log("[Any Proxy]", targetUrl, {

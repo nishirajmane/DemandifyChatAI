@@ -1,11 +1,11 @@
 [package]
-name = "nextchat"
+name = "demandify-ai-chat"
 version = "0.1.0"
-description = "A cross platform app for LLM ChatBot."
-authors = ["Yidadaa"]
+description = "A cross platform AI assistant app by Demandify Media."
+authors = ["Demandify Media"]
 license = "mit"
-repository = ""
-default-run = "nextchat"
+repository = "https://github.com/DemandifyMedia/demandify-ai-chat"
+default-run = "demandify-ai-chat"
 edition = "2021"
 rust-version = "1.60"
 

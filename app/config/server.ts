@@ -1,6 +1,8 @@
 import md5 from "spark-md5";
 import { DEFAULT_MODELS, DEFAULT_GA_ID } from "../constant";
 import { isGPT4Model } from "../utils/model";
+import { logApiKeyUsage } from "../utils/security";
+import { logSecurityAudit } from "../utils/security-audit";
 
 declare global {
   namespace NodeJS {
@@ -119,11 +121,7 @@ function getApiKey(keys?: string) {
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
   const apiKey = apiKeys[randomIndex];
   if (apiKey) {
-    console.log(
-      `[Server Config] using ${randomIndex + 1} of ${
-        apiKeys.length
-      } api key - ${apiKey}`,
-    );
+    logApiKeyUsage("API", randomIndex, apiKeys.length, apiKey);
   }
 
   return apiKey;
@@ -135,6 +133,9 @@ export const getServerSideConfig = () => {
       "[Server Config] you are importing a nodejs-only module outside of nodejs",
     );
   }
+
+  // Run security audit on server startup
+  logSecurityAudit();
 
   const disableGPT4 = !!process.env.DISABLE_GPT4;
   let customModels = process.env.CUSTOM_MODELS ?? "";
