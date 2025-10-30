@@ -175,7 +175,7 @@ export class ChatGLMApi implements LLMApi {
     const requestPayload = this.createPayload(messages, modelConfig, options);
     const path = this.path(this.getModelPath(modelType));
 
-    console.log(`[Request] glm ${modelType} - model: ${requestPayload.model}, messages: ${requestPayload.messages?.length || 0}`);
+    console.log(`[Request] glm ${modelType} - model: ${requestPayload.model}, type: ${modelType}`);
 
     const controller = new AbortController();
     options.onController?.(controller);
